@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<!-- Site Data -->
+	<title>Simulador de Árbol Binario de Búsqueda</title>
+	<meta name="description"
+		content="Herramienta online para la simulación paso a paso de recorridos en Árboles Binarios de Búsqueda">
+	<meta name="keywords" content="Árbol Binario de Búsqueda, BST, simulador, preorden, inorden, postorden">
+	<meta name="author" content="ManuelDevCoder">
+	<meta name="robots" content="index,follow" />
+
+	<link href="css/styles.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+	<h1><span>Simulador de Árbol Binario de Búsqueda</span></h1>
+
+	<ul class="menu">
+		
+		<li>
+			<a href="#" onclick="excluirTudo()">Limpiar</a>
+		</li>
+		
+		<li>
+			<a href="#" onclick="iniciarRecorrido()">Recorridos</a>
+		</li>
+		
+		
+		<li class="menu-insert-control" style="float: right;">
+			<input type="number" id="inputValor" />
+			<button id="btnInsertarNodo" style="margin-right: 15px;">Insertar Nodo</button>
+		</li>
+	</ul>
+	
+	<div id="main">
+		<canvas width="1000" height="600" id="drawing">
+			Su navegador es muy antiguo. No soporta canvas.
+		</canvas>
+	</div>
+
+	<div id="recorrido-container">
+		<span id="recorrido-output"></span>
+	</div>
+	
+	<div class="footer" style="text-align:center; padding:20px; font-size:14px; color:#555; border-top:1px solid #ddd; margin-top:40px;">
+    <p>© 2025 Desarrollado por ManuelDevCoder</p>
+    <p>
+        <a href="https://github.com/ManuelDevCoder" target="_blank" style="text-decoration:none; color:#0366d6;">GitHub</a> · 
+        <a href="mailto:pedrogonzxlez@gmail.com" style="text-decoration:none; color:#0366d6;">Contacto</a>
+    </p>
+</div>
+
+</body>
+
+</html>

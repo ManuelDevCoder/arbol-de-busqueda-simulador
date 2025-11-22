@@ -1,0 +1,341 @@
+/* Estilos generales */
+html,
+body {
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	background: #f9f9f9; /* Fondo gris muy claro */
+}
+
+body {
+	margin-top: 10px;
+	font: 14px "Trebuchet MS", sans-serif;
+	color: #333; /* Texto oscuro */
+}
+
+/* Contenedor principal */
+#main {
+	width: 1000px;
+	border: 1px solid #ddd; /* Borde gris claro */
+	border-radius: 8px;
+	margin: 10px auto;
+	position: relative;
+	background: #ffffff; /* Fondo blanco para el área de dibujo */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos de títulos y pie de página */
+h1 {
+    text-align: center; 
+    font-family: Montserrat, sans-serif; 
+    font-size: 28px;
+    color: #222; /* Título negro */
+    margin-bottom: 15px;
+	font-weight: bold;
+}
+
+h1 span {
+    color: #222;
+}
+
+.footer {
+    text-align: center; 
+    font-family: Montserrat, sans-serif; 
+    font-size: 14px; 
+    color: #777; /* Color de texto gris */
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #555; /* Enlace gris oscuro */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Estilos del Menú de Navegación --- */
+
+.menu {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;  
+	background: #333; /* Fondo del menú negro/gris oscuro */
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.menu:after{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.menu li{
+	float: left;
+	position: relative;
+	padding: 0;
+}
+
+.menu a{
+	display: block;
+	height: 40px;
+	padding: 0 20px;
+	color: #eee; /* Texto muy claro */
+	/* text-transform: uppercase; <-- ELIMINADO */
+	font: bold 12px/40px Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	transition: background-color 0.3s;
+}
+
+.menu li:hover > a{
+	background: #444; /* Fondo más oscuro al pasar el ratón */
+	color: #ffffff;
+}
+
+/* Sub-menu */
+.menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;    
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 1000;    
+    background: #444; /* Fondo del submenú */
+    border-radius: 0 0 4px 4px;
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.menu li:hover > ul{
+	display: block;
+}
+
+.menu ul li{
+    float: none;
+    margin: 0;
+    padding: 0;
+    display: block;  
+    box-shadow: none;
+}
+
+.menu ul a{    
+    padding: 8px 15px;
+    height: auto;
+    line-height: 1.5;
+    display: block;
+    white-space: nowrap;
+    float: none;
+    text-transform: none;
+    font-weight: normal;
+    color: #eee;
+}
+
+.menu ul a:hover{
+    background: #555; /* Acento gris al pasar el ratón */
+    color: #ffffff;
+}
+
+/* Control de inserción (Alineado a la derecha) */
+.menu-insert-control {
+	float: right;
+	padding: 0 15px 0 0;
+	position: relative;
+	top: 0;
+	line-height: 40px;
+}
+
+.menu-insert-control label {
+	color: #eee;
+	/* text-transform: uppercase; <-- ELIMINADO */
+	font: bold 12px/40px Arial, Helvetica, sans-serif;
+	margin-right: 5px;
+	text-shadow: none;
+}
+
+.menu-insert-control input {
+	padding: 5px 10px;
+	font-size: 1.1em;
+	width: 80px;
+	text-align: center;
+	border: 1px solid #777;
+	border-radius: 4px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+    box-sizing: content-box;
+}
+
+.menu-insert-control button {
+	height: 30px;
+	line-height: 30px;
+	padding: 0 15px;
+	vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* Contenedor de resultados de recorrido */
+#recorrido-container {
+	width: 1000px;
+	margin: 10px auto;
+	padding: 15px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	background: #ffffff;
+	font-size: 1.2em;
+	font-family: Arial, sans-serif;
+	min-height: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#recorrido-output {
+	font-weight: normal;
+	color: #333;
+}
+
+/* Estilos del menú contextual (opciones de nodo) */
+#divOpcoes {
+	display: none;
+	border: 1px solid #555;
+	background: #ffffff;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+	font-size: 12px;
+	padding: 5px 0;
+	font-family: sans-serif;
+	z-index: 1000;
+    border-radius: 4px;
+}
+
+#divOpcoes div {
+	cursor: pointer;
+	padding: 5px 15px;
+	color: #333;
+    white-space: nowrap;
+}
+
+#divOpcoes div:hover {
+	background: #eee;
+}
+
+/* --- Estilos de jQuery UI (Diálogos y Botones) --- */
+
+/* Botones */
+.ui-button {
+    background: #555 !important; /* Botón gris oscuro */
+    color: white !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-weight: bold !important;
+    transition: background-color 0.2s;
+}
+
+.ui-button:hover {
+    background: #444 !important;
+}
+
+.ui-button span {
+	padding: 4px 8px !important;
+	font-family: Arial, sans-serif;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+/* Diálogos */
+.ui-dialog {
+    border-radius: 8px !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid #333 !important; /* Borde para el diálogo */
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    background: #333 !important; /* Barra de título negra */
+    color: white !important;
+    border: none !important;
+    border-radius: 8px 8px 0 0 !important;
+    padding: 10px 15px;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+    /* Asegurar que el botón de cerrar sea visible y funcional */
+    position: absolute;
+    right: .3em;
+    top: 50%;
+    width: 19px;
+    margin: -10px 0 0 0;
+    padding: 1px;
+    height: 18px;
+    background: none !important;
+    border: none !important;
+    color: white !important;
+}
+
+.ui-dialog .ui-dialog-titlebar-close .ui-icon {
+    /* Asegurar que el icono de cerrar se muestre */
+    display: block;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    /* Usar un icono de jQuery UI o asegurar que el icono por defecto sea blanco */
+    background-image: url(images/ui-icons_ffffff_256x240.png); /* Asumiendo que este icono existe o se carga */
+    background-position: -80px -128px; /* Posición del icono 'close' en el sprite */
+}
+
+.ui-dialog .ui-dialog-content {
+    padding: 20px !important;
+    background: #ffffff; /* Fondo blanco del contenido */
+}
+
+.ui-widget-overlay {
+    background: #666; /* Fondo del overlay gris */
+    opacity: 0.5;
+    filter: Alpha(Opacity=50);
+}
+
+/* --- Estilos de Toast (Notificaciones) --- */
+
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    padding: 10px 15px;
+    border-radius: 4px;
+    color: #eee; /* Texto claro */
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: none; /* Oculto por defecto */
+    min-width: 200px;
+    background-color: #333; /* Fondo oscuro por defecto */
+    border: 1px solid #555; /* Borde gris oscuro */
+}
+
+/* Usaremos variaciones de gris para los tipos de mensaje */
+.toast-success {
+    background-color: #222; /* Negro más profundo para éxito */
+    border-left: 5px solid #777; /* Borde gris claro */
+}
+
+.toast-error {
+    background-color: #222; /* Negro más profundo para error */
+    border-left: 5px solid #999; /* Borde gris medio */
+}
+
+.toast-info {
+    background-color: #222; /* Negro más profundo para info */
+    border-left: 5px solid #555; /* Borde gris oscuro */
+}
