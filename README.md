@@ -1,6 +1,6 @@
 # Simulador de Árbol Binario de Búsqueda
 
-### Características Principales
+## Características Principales
 
 *   **Visualización Dinámica:** Dibuja el árbol en un lienzo (Canvas) y ajusta automáticamente el diseño para mantener la claridad.
 *   **Operaciones BST:** Permite la inserción de nuevos nodos y la eliminación de nodos (hojas o con un solo hijo, manejando la eliminación de nodos con dos hijos mediante el sucesor inorden).
