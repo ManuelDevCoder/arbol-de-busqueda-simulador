@@ -1,11 +1,5 @@
 # Simulador de Árbol Binario de Búsqueda
 
-## Descripción del Proyecto
-
-Este es un simulador interactivo de Árboles Binarios de Búsqueda (BST) desarrollado en HTML, CSS y JavaScript (utilizando jQuery y jQuery UI).
-
-La herramienta permite a los usuarios visualizar la estructura de un BST en tiempo real mientras insertan y eliminan nodos. Es ideal para estudiantes y profesionales que desean comprender visualmente cómo funcionan las operaciones fundamentales de los BST y cómo se realizan los recorridos principales.
-
 ### Características Principales
 
 *   **Visualización Dinámica:** Dibuja el árbol en un lienzo (Canvas) y ajusta automáticamente el diseño para mantener la claridad.
