@@ -25,7 +25,7 @@ Dado que este es un proyecto de frontend puro, no requiere instalación de depen
 ### 1. Clonar el Repositorio
 
 ```bash
-git clone [URL_DEL_REPOSITORIO]
+git clone https://github.com/ManuelDevCoder/arbol-de-busqueda-simulador
 cd simulador-bst
 ```
 
